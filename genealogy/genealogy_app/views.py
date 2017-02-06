@@ -30,3 +30,8 @@ class LoginView(View):
         else:
             form.add_error(None, "Wrong login or password")
             return render(request,'login_form.html', {'form': form})
+
+class mainPage(View):
+    
+    def get(self,request):
+        return render (request, 'index.html')
