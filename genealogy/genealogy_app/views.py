@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
-from genealogy_app.forms import LoginForm
+from genealogy_app.forms import LoginForm, NewUserForm
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
+from django.views.generic import CreateView
+from django.contrib.auth.models import User
 
 # Create your views here.
 class LoginView(View):
@@ -35,3 +37,11 @@ class mainPage(View):
     
     def get(self,request):
         return render (request, 'index.html')
+
+class NewUserView (View):
+    def get(self, request):
+
+        form= NewUserForm
+        return render(request, "user_form.html", {"form": form})
+
+        

@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from genealogy_app.views import LoginView, mainPage
+from genealogy_app.views import LoginView, mainPage, NewUserView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/?$', LoginView.as_view(), name='login-form'),
     url(r'^main/?$', mainPage.as_view(), name='main-form'),
+    url(r'^newuser/?$', NewUserView.as_view(), name='new_user-form'),
     
 
 ]
