@@ -1,14 +1,18 @@
  <div class="panel panel-success">
         <div class="panel-heading">
-            Tweet
+          
         </div>
         <div class="panel-body">
 
-            <p><b>Add Tweet:</b></p>
+            <p><b>Dodaj użytkownika:</b></p>
             <div>
                 <form action="" method="post">
                     {% csrf_token %}
-                    {{ form.as_p }}
+                                    {{ form.as_p }}
+
+                    
+
+
                     <input type="submit" value="Save">
                 </form>
             </div>

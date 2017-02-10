@@ -20,7 +20,29 @@ class LoginForm(forms.Form):
         widget=forms.PasswordInput(),        
     )
 
-class NewUserForm(ModelForm):
-    class Meta:
-        model = User
-        fields = '__all__'
+class CreateAccountForm(forms.Form):
+    login = forms.CharField(
+        label='Username',
+        max_length=64,
+        widget=forms.TextInput,
+        required=True,
+    )
+    password = forms.CharField(
+        label='Password',
+        max_length=64,
+        widget=forms.PasswordInput,
+        required=True,
+    )
+    password2 = forms.CharField(
+        label='Password',
+        max_length=64,
+        widget=forms.PasswordInput,
+        required=True,
+
+    )
+    email = forms.CharField(
+        label='Email',
+        max_length=64,
+        widget=forms.TextInput,
+        required=True,
+    )
