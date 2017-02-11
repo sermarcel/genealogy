@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 class LoginView(View):
 
     def get(self,request):
-
+    
         form = LoginForm()
         return render(request,'login_form.html', {'form': form})
 
@@ -50,10 +50,10 @@ class CreateAccount(View):
             user = form.cleaned_data['login']
             pass1 = form.cleaned_data['password']
             pass2 = form.cleaned_data['password2']
-            em = form.cleaned_data['email']
+            email = form.cleaned_data['email']
 
             if pass1 == pass2:
-                a = User.objects.create_user(username = user, password = pass1, email = em)
+                a = User.objects.create_user(username = user, password = pass1, email = email)
                 a.save()
         
             else:
