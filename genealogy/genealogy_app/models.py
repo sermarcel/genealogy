@@ -3,6 +3,17 @@ from django import forms
 
 # Create your models here.
 
+
+RELATION_TYPES = (
+    (-1, "nie określono"),
+    (0, "rodzic"),
+    (1, "dziecko"),
+    (2, "rodzeństwo"),
+    (3, "w związku")
+
+)
+
+
 class Anceator(models.Model):
     first_name = models.CharField(max_length=24)
     secound_name = models.CharField(max_length=24, null = True)
@@ -14,7 +25,7 @@ class Anceator(models.Model):
         return '{} {} {}'.format(self.first_name, self.secound_name, self.surname)
 
 class Relationship(models.Model):
-    pass
+    relation_name = 
 
 class AnceatorRelationship(models.Model):
     relationship = models.ForeignKey(Relationship)
