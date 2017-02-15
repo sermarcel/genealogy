@@ -25,7 +25,7 @@ class Anceator(models.Model):
         return '{} {} {}'.format(self.first_name, self.secound_name, self.surname)
 
 class Relationship(models.Model):
-    relation_name = 
+    relation_name = models.IntegerField(choices=RELATION_TYPES, default=-1)
 
 class AnceatorRelationship(models.Model):
     relationship = models.ForeignKey(Relationship)
