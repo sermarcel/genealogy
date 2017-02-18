@@ -16,11 +16,11 @@ RELATION_TYPES = (
 
 class Anceator(models.Model):
     first_name = models.CharField(max_length=24)
-    secound_name = models.CharField(max_length=24, null = True)
+    secound_name = models.CharField(max_length=24, null=True, blank=True)
     surname = models.CharField(max_length=36)
-    maiden_name = models.CharField(max_length=36)
+    maiden_name = models.CharField(max_length=36, null=True, blank=True)
     relationship = models.ManyToManyField('relationship', through='AnceatorRelationship')
-    notes = models.TextField()
+    notes = models.TextField(null=True, blank=True)
     image = models.ImageField(upload_to='static/content/', null=True, blank=True)
 
     def __str__(self):
