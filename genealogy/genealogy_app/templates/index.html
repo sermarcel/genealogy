@@ -1,50 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="pl">
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Drzewo genealogiczne">
-    <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-    <script type="text/javascript" src="static/js/main.js"></script>
-    <title> Drzewo genealogiczne </title>
+   
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <title> Genealogia </title>
+
 </head>
 
 <body>
 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"> DRZEWO GENEALOGICZNE </a>
+    </div>
+    <ul class="nav navbar-nav">
 
+      <li><a href="#"> O projekcie </a></li>
+      <li><a href="#"> Kontakt </a></li>
+      <li><a href="#"> Regulamin </a></li>
 
-  <div id="tekst">
-    <h1> Odkryj historię swojej rodziny </h1>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. 
-      Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. 
-    </p>
-
-   <p id="buttony">
-   <button type="button" class="btn btn-warning" id='login'> Zaloguj się</button>
-   <button type="button" class="btn btn-success" id='new'> Zarejestruj się </button>
-   </p>
-
+    </ul>
   </div>
-  
-<!-- 
+</nav>
 
-<div id="stopka">
+<section id="ramka">
+    
+
+    <div>
+        <h1 id="h1"> Jesteś pewny, że historia Twojej rodziny niczym Cię nie zaskoczy? </h1>
+        <p> <solid> Zaloguj się, stwórz własne drzewo genealogiczne </solid> i przekonaj się, jak ciekawa jest Twoja historia. </p>
+
+        <div id="buttony">
+            <a class="btn btn-success btn-lg" href="login" role="button"> Zaloguj się </a>
+            <a class="btn btn-danger btn-lg" href="newuser" role="button"> Zarejestruj się </a>
+        </div>
+
+    </div>
+
+
+</section>
+
+<!--
 <footer>
-  <p> Copywrights by <br>
-  <a target="blank" href="https://github.com/KamilaSieczkowska"> Kamila Sieczkowska </a> 
-  and <a target="blank" href="https://github.com/sermarcel"> Marcin Brz </p>
-  
+  Copywrights by <a href="https://github.com/KamilaSieczkowska"> Kamila </a> and <a href="https://github.com/sermarcel"> Marcin </a>
 </footer>
-</div>
-
--->
-
+--> 
 
 </body>
 

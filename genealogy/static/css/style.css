@@ -1,0 +1,39 @@
+html, body {
+	width: 100%;
+	min-width: 100%;
+}
+
+body {
+	background: url("/static/content/bg2.jpg") no-repeat center center fixed;
+	background-size: cover;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+
+#ramka {
+	height: 350px;
+	width: 640px;
+	float: left;
+	margin-top: 200px;
+	text-align: justify-all;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.5em;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 30px;
+	line-height: 40px;
+}
+
+#h1 {
+	color: #FF3333;
+}
+
+
+
+#buttony {
+	float: right;
+	padding: 30px;
+}
