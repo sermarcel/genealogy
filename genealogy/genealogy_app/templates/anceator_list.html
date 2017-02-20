@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Product list</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Lista produktów</h1>
+        <table>
+        {% for anceator in object_list %}
+            <tr>
+                <td>{{ anceator.surname}}</td>
+                <td></td>
+                <td> zł</td>
+                <td></td>
+            </tr>
+        {% endfor %}
+        </table>
+        <a href="/add_product">Dodaj produkt</a>
+    </body>
+</html>

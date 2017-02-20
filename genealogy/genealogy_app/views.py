@@ -6,6 +6,9 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic import CreateView
 from django.contrib.auth.models import User
+from django.views.generic.list import ListView
+from genealogy_app.models import Anceator
+
 
 # Create your views here.
 class LoginView(View):
@@ -61,4 +64,6 @@ class CreateAccount(View):
 
         return redirect("/login")
 
-        
+class AnceatorView(ListView):
+    model = Anceator
+    template_name = 'anceator_list.html'
