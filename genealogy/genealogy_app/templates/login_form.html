@@ -1,17 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Drzewo genealogiczne">
+   
+    <link rel="stylesheet" type="text/css" href="static/css/log.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <div class="panel panel-success">
-        <div class="panel-heading">
-       
-        </div>
-        <div class="panel-body">
 
-            <p><b>Log to system:</b></p>
-            <div>
-                <form action="" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <input type="submit" value="Save">
-                </form>
-            </div>
-        </div>
+    <title> Genealogia </title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"> DRZEWO GENEALOGICZNE </a>
     </div>
+    <ul class="nav navbar-nav">
+
+      <li><a href="#"> O projekcie </a></li>
+      <li><a href="#"> Kontakt </a></li>
+      <li><a href="#"> Regulamin </a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<section id="ramka">
+    
+        <h1 id="h1"> Zaloguj się </h1> 
+
+       <form action="" method="POST">
+
+        {% csrf_token %}
+           <div class="container">
+              <p> <label> Login </label>
+
+               {{form.login}}             
+              </p>
+
+              <p>
+               <label> Hasło </label>
+              {{ form.password}}
+               
+              </p>
+
+              <p>
+               <input type="checkbox" checked="checked"> Zapamiętaj mnie
+              </p>
+
+              <p>
+               <input class="btn btn-success btn-lg"  type="submit" value = 'Zaloguj się' >
+              </p>
+            </div>
+            
+            <span class="psw"> <a href="#"> Nie pamiętam hasła</a></span>
+        </form>
+
+</section>
+
+<!--
+<footer>
+  Copywrights by <a href="https://github.com/KamilaSieczkowska"> Kamila </a> and <a href="https://github.com/sermarcel"> Marcin </a>
+</footer>
+--> 
+
+</body>
+
+</html>

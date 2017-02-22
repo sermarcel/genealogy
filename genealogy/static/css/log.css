@@ -1,0 +1,58 @@
+html, body {
+	width: 100%;
+	min-width: 100%;
+}
+
+body {
+	background: url("/static/content/bg2.jpg") no-repeat center center fixed;
+	background-size: cover;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+
+#ramka {
+	height: 400px;
+	width: 540px;
+	float: left;
+	margin-top: 150px;
+	text-align: justify-all;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.5em;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 30px;
+	line-height: 40px;
+}
+
+#h1 {
+	color: #FF3333;
+    padding-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+}
+
+
+input[type=text], input[type=password] {
+    padding: 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	color: black;
+}
+
+.psw {
+    font-size: 0.7em;
+    text-align: left;
+    margin: 20px;
+}
+
+#buttony {
+	float: right;
+	padding: 30px;
+}
