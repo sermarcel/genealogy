@@ -33,7 +33,9 @@ class LoginView(View):
                 return HttpResponse("Logowanie poprawne")
             
         else:
-            form.add_error('eror', "Wrong login or password")
+            less_than_one = form.cleaned_data.get('less_than_one')        
+            
+            form.add_error('less_than_one', "Wrong login or password")
             return render(request,'login_form.html', {'form': form})
 
 class mainPage(View):

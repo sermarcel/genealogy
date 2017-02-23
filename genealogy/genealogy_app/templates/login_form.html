@@ -42,14 +42,14 @@
         {% csrf_token %}
            <div class="container">
               <p> <label> Login </label>
-
+                {{less_than_one}}
                {{form.login}}             
               </p>
 
               <p>
                <label> Hasło </label>
-              {{ form.password}}
-               
+               {{form.password}}             
+                         
               </p>
 
               <p>
