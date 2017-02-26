@@ -33,7 +33,6 @@ class LoginView(View):
                 return HttpResponse("Logowanie poprawne")
             
         else:
-            
             form.add_error(None, "Wrong login or password")
             return render(request,'login_form.html', {'form': form})
 

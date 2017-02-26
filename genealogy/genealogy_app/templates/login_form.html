@@ -33,9 +33,13 @@
   </div>
 </nav>
 
+
 <section id="ramka">
     
         <h1 id="h1"> Zaloguj się </h1> 
+{% if form.errors %}
+<p>Podałeś błędne hasło lub login</p>
+{% endif %}
 
        <form action="" method="POST">
 
