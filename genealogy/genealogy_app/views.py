@@ -66,4 +66,14 @@ class CreateAccount(View):
 
 class AnceatorView(ListView):
     model = Anceator
-    template_name = 'anceator_list.html'
+    template_name = 'anceator_list.html'        
+   
+
+
+class AddAnceator(CreateView):
+    model = Anceator
+    template_name = 'anceator_form.html'
+    fields='__all__'
+
+    
+    

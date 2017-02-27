@@ -15,14 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from genealogy_app.views import LoginView, mainPage, CreateAccount, AnceatorView
+from genealogy_app.views import LoginView, mainPage, CreateAccount, AnceatorView, AddAnceator
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/?$', LoginView.as_view(), name='login-form'),
     url(r'^main/?$', mainPage.as_view(), name='main-form'),
     url(r'^newuser/?$', CreateAccount.as_view(), name='new_user-form'),
-    url(r'^anceators/', AnceatorView.as_view(),name='anceator-list'),
+    url(r'^anceators/?$', AnceatorView.as_view(),name='anceator-list'),
+    url(r'^add/?$', AddAnceator.as_view(),name='anceator-form'),
 
     
 
