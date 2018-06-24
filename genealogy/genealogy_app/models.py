@@ -30,7 +30,11 @@ DEAD_OR_ALIVE = (
 )
 
 
+class Family(models.Model):
+    family_name = models.CharField(max_length=24)
 
+    def __str__(self):
+        return '{}'.format(self.family_name)
 
 class Anceator(models.Model):
     first_name = models.CharField(max_length=24)
@@ -39,7 +43,7 @@ class Anceator(models.Model):
     gender = models.IntegerField(choices=GENDER, default=-1)
     maiden_name = models.CharField(max_length=36, null=True, blank=True)
     #relationship = models.ManyToManyField('relationship', through='AnceatorRelationship')
-    family = models.ManyToManyField('self', symmetrical=False, through='Relationship')
+    family = models.ForeignKey(Family, default='')
     notes = models.TextField(null=True, blank=True)
     image = models.ImageField(upload_to='static/content/', null=True, blank=True)
     birth_date = models.DateField(null=True, blank=True)
@@ -49,7 +53,7 @@ class Anceator(models.Model):
 
     def __str__(self):
         return '{} {} {}'.format(self.first_name, self.secound_name, self.surname)
-
+'''
 class Relationship(models.Model):
     relation_name = models.IntegerField(choices=RELATION_TYPES, default=-1)
     anceator = models.ForeignKey(Anceator, on_delete=models.CASCADE,related_name='anceator1' )
@@ -57,3 +61,5 @@ class Relationship(models.Model):
         
     def __str__(self):
         return '{}  is {} for {}'.format(self.anceator, self.relation_name, self.family)
+'''
+

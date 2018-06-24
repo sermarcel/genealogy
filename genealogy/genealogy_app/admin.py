@@ -1,5 +1,5 @@
 from django.contrib import admin
-from genealogy_app.models import Anceator, Relationship
+from genealogy_app.models import Anceator, Family
 
 # Register your models here.
 
@@ -7,7 +7,7 @@ from genealogy_app.models import Anceator, Relationship
 class AnceatorAdmin(admin.ModelAdmin):
     list_display = ('first_name', 'surname')
 
-@admin.register(Relationship)
-class RelationshipAdmin(admin.ModelAdmin):
-    list_display = ('relation_name',)
+@admin.register(Family)
+class FamilyAdmin(admin.ModelAdmin):
+    list_display = ('family_name',)
 

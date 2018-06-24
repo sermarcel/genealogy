@@ -73,7 +73,7 @@ class AnceatorView(ListView):
 class AddAnceator(CreateView):
     model = Anceator
     template_name = 'anceator_form.html'
-    fields='__all__'
-
+    fields='first_name','surname','dead_or_alive','gender'
+    success_url='/anceators'
     
     
