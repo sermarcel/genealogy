@@ -53,6 +53,9 @@ class Anceator(models.Model):
 
     def __str__(self):
         return '{} {} {}'.format(self.first_name, self.secound_name, self.surname)
+
+class Relationship(models.Model):
+    pass
 '''
 class Relationship(models.Model):
     relation_name = models.IntegerField(choices=RELATION_TYPES, default=-1)
