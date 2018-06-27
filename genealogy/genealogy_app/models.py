@@ -55,7 +55,13 @@ class Anceator(models.Model):
         return '{} {} {}'.format(self.first_name, self.secound_name, self.surname)
 
 class Relationship(models.Model):
-    pass
+    anceator = models.ForeignKey(Anceator, on_delete.models.CASCADE, related_name = 'anceator')
+    mother =  models.ForeignKey(Anceator, on_delete.models.CASCADE, related_name = 'mother')
+    father=  models.ForeignKey(Anceator, on_delete.models.CASCADE, related_name = 'father')
+
+    def __str__(self):
+        return '{} is child {} and {}'.format(self.anceator,self.mother, self.father)
+
 '''
 class Relationship(models.Model):
     relation_name = models.IntegerField(choices=RELATION_TYPES, default=-1)
